@@ -8,16 +8,33 @@ let df;
 
 //my table is comma separated value "csv"
 function preload() {
-  df = loadTable("data/voedingswaarde.csv");
+  df = loadTable("data/voedingswaarde.csv", 'csv', 'header');
 }
 
 function setup() {
-  createCanvas(600, 400);
-  console.log(df);
+  createCanvas(800, 600);
+  background(246);
+  // console.log(df);
+  textAlign(CENTER, TOP);
+  for (let r = 0; r < df.getRowCount(); r++) {
+    const food = (df.getString(r, "Food"));
+    const serving = (df.getNum(r, "Serving"));
+    const calories = (df.getNum(r, "Calories"));
+    const x = random(0, width);
+    const y = random(0, height);
+    const size = map(serving, 0, 280, 0, 100);
+    const color = map(calories, 0, 130, 255, 0);
+    fill(color);
+    circle(x, y, size);
+    fill(30);
+    text(food, x, y + size/1.8);
 
+
+  // console.log(serving);
+  }
 }
 
+
 function draw() {
-  background(246);
-  ellipse(200,200,30);
+  // ellipse(200,200,30);
 }
