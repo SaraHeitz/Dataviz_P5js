@@ -1,0 +1,32 @@
+.container {
+  box-sizing:border-box;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    ". myContainer . ";
+  }
+
+
+
+
+body {
+  font-family: "Ucity", Arial, sans-serif;
+  margin: auto;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1em; /* 30px/16=1.875em */
+  font-weight: 350;
+  letter-spacing: 0.5;
+  color: #AAA;
+  margin-bottom: 18px;
+}
+
+h2 {
+  margin-top: 12px;
+  font-size: 1.6em; /* 30px/16=1.875em */
+  color: #404040;
+  font-weight: 400;
+}
