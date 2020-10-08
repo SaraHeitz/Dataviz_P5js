@@ -1,4 +1,5 @@
 .container {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: auto;
@@ -11,6 +12,20 @@
   color: #FF00FF;
   }
 
+
+
+input[type=range]{
+  -webkit-appearance: none;
+  background: #EEE;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 12px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+}
 
 body {
   font-family: "Ucity", Arial, sans-serif;

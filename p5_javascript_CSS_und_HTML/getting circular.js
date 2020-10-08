@@ -28,7 +28,7 @@ function sortByProperty(property){
 function setup(){
   //myFont = loadFont('Fonts/UCity-Regular.otf')
   wagnerBrown = data.WagnerBrown;
-  noCanvas();
+  createP("This is text");
   createCanvas(600,400);
   translate(400, 200);
   background(255);
@@ -74,5 +74,7 @@ function setup(){
 }
 
 function draw(){
-
+  save("WagnerBrown.svg"); // give file name
+  print("saved svg");
+  noLoop(); // we just want to export once
 }
